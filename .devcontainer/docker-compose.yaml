@@ -1,0 +1,11 @@
+---
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - source: ../
+        target: /home/robot/robot_ws/src/
+        type: bind
+    user: robot

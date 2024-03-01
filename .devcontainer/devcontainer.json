@@ -1,0 +1,31 @@
+{
+    "name": "Workspace",
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "workspace",
+    "workspaceFolder": "/home/robot/robot_ws",
+    "postCreateCommand": "/bin/bash ./src/.devcontainer/postcreate.sh",
+    "shutdownAction": "stopCompose",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "GitHub.copilot",
+                "eamodio.gitlens",
+                "ms-python.python",
+                "redhat.vscode-xml"
+            ],
+            "settings": {
+
+                "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+                "C_Cpp.default.cppStandard": "c++17",
+                "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+                "C_Cpp.default.includePath": [
+                    "/usr/include/**",
+                    "/usr/local/include/**",
+                    "/opt/ros/${ROS_DISTRO}/include/**",
+                    "${workspaceFolder}/**"
+                ]
+            }
+        }
+    }
+}

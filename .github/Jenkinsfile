@@ -1,5 +1,3 @@
-rosPipeline(
-  rosdistro: getDistroFromBranch(env.CHANGE_TARGET),
-  upstreamProjects: 'robotnik_msgs/ros-devel',
-  upload: needUpload(env.BRANCH_NAME),
+buildPackage(
+  upstreamProjects: 'robotnik_msgs',
 )
